@@ -1,9 +1,9 @@
 <?php
 //Defining our database paramateres
-DEFINE('DB_USER','2675892_ziga');
-DEFINE('DB_PSWD','gamer123');
-DEFINE('DB_HOST','fdb18.awardspace.net');
-DEFINE('DB_NAME','2675892_ziga');
+DEFINE('DB_USER','Mike');
+DEFINE('DB_PSWD','ziza');
+DEFINE('DB_HOST','localhost');
+DEFINE('DB_NAME','WebsiteDB');
 //Using variable to connect to database
 $dbcon=mysqli_connect(DB_HOST,DB_USER,DB_PSWD,DB_NAME);
 if(!$dbcon){
