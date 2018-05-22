@@ -466,6 +466,7 @@ height:8%;
 	background-color:rgba(70,70,70,0.5);
 	border:solid 2px;
 	border-color:grey;
+	text-align:center;
 }
 #logout-btn-div{
 	position:relative;
@@ -638,13 +639,13 @@ height:8%;
 /*  GO FULL WIDTH BELOW 1026 PIXELS */
 @media only screen and (max-width: 1026px) {
 	.col {  margin: 0% 0 0% 0%; }
-    .content{height:2550px;}
-	.content-ac{height:2100px;}
+    .content{height:auto;}
+	.content-ac{height:auto;}
 	.thankyou-content{height:1400px;}
 	username-login{padding-top:0%;}
 	password-login{padding-top:0%;}
 	.bottom-border-img{
-		height:6%;
+		height:15%;
 	}
 	.image-post{
 		width:15%;
