@@ -1,9 +1,9 @@
 <?php
 //Defining our database paramateres
-DEFINE('DB_USER','Mike');
-DEFINE('DB_PSWD','ziza');
-DEFINE('DB_HOST','localhost');
-DEFINE('DB_NAME','WebsiteDB');
+DEFINE('DB_USER','2675892_ziga');
+DEFINE('DB_PSWD','gamer123123');
+DEFINE('DB_HOST','fdb18.awardspace.net');
+DEFINE('DB_NAME','2675892_ziga');
 //Using variable to connect to database
 $dbcon=mysqli_connect(DB_HOST,DB_USER,DB_PSWD,DB_NAME);
 
@@ -103,7 +103,19 @@ $password;$fullname;$firstname;$lastname;
 	$imageName=$_FILES['profileimage']['name'];
     $imageType=$_FILES['profileimage']['type'];	
 	$imageData=($_FILES['profileimage']['tmp_name']);
-	
+	if($_FILES['profileimage']['tmp_name']==null || $_FILES['profileimage']['tmp_name']==''){
+		 
+      echo "<script>
+	 function showerror(){
+	 var notconfirm=document.getElementById('wrong-format'); 
+	 notconfirm.style.visibility='visible';
+	 notconfirm.innerHTML='Please choose an image for your profile!';}
+	 window.onload=showerror;</script>";
+	   //Remove post data so error does not repeat
+	 unset($_POST);
+	 unset($_FILES);
+	}
+	else{
 	//Check if file is image!
 if(!(getimagesize($_FILES['profileimage']['tmp_name'])))
 {	
@@ -115,20 +127,6 @@ if(!(getimagesize($_FILES['profileimage']['tmp_name'])))
 	 function showerror(){
 	 var notconfirm=document.getElementById('wrong-format'); 
 	 notconfirm.style.visibility='visible';}
-	 window.onload=showerror;</script>";
-	   //Remove post data so error does not repeat
-	 unset($_POST);
-	 unset($_FILES);
-	}
-	else{
-		//Check if image is given
-		//Show error
-      
-      echo "<script>
-	 function showerror(){
-	 var notconfirm=document.getElementById('wrong-format'); 
-	 notconfirm.style.visibility='visible';
-	 notconfirm.innerHTML='Please choose an image for your profile!';}
 	 window.onload=showerror;</script>";
 	   //Remove post data so error does not repeat
 	 unset($_POST);
@@ -183,5 +181,5 @@ if(!(getimagesize($_FILES['profileimage']['tmp_name'])))
 	 window.onload=showerror;</script>";
 	}}
 }
-}
+}}
 ?>
